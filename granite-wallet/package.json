@@ -1,0 +1,21 @@
+{
+  "name": "granite-wallet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Granite Wallet & Exchange — Self-custody multi-chain wallet by Black Mountain Investment Group",
+  "author": "Black Mountain Investment Group LLC",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:core": "cd packages/wallet-core && npm run build",
+    "build:extension": "cd packages/extension && npm run build",
+    "build": "npm run build:core && npm run build:extension",
+    "dev:extension": "cd packages/extension && npm run dev",
+    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
