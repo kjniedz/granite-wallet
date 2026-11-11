@@ -1,0 +1,27 @@
+{
+  "name": "granite-wallet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Granite Wallet: self-custody multi-chain browser extension wallet by Black Mountain Investment Group",
+  "author": "Black Mountain Investment Group LLC",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:core": "cd packages/wallet-core && npm run build",
+    "build:extension": "cd packages/extension && npm run build",
+    "build": "npm run build:core && npm run build:extension",
+    "dev:extension": "cd packages/extension && npm run dev",
+    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules",
+    "typecheck": "npm run typecheck -w @granite/wallet-core && npm run typecheck -w @granite/extension",
+    "test": "npm test -w @granite/wallet-core",
+    "package": "bash scripts/build-chrome-store.sh"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.5.4"
+  }
+}

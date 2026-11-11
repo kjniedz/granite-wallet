@@ -1,0 +1,32 @@
+{
+  "name": "@granite/extension",
+  "version": "0.2.0",
+  "description": "Granite Wallet Chrome Extension \u2014 Self-custody multi-chain wallet",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@granite/wallet-core": "*",
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webextension-polyfill": "^0.10.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/webextension-polyfill": "^0.10.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "~5.5.4",
+    "vite": "^5.0.0",
+    "@types/qrcode": "^1.5.5"
+  },
+  "license": "MIT"
+}

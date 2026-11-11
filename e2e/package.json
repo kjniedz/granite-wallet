@@ -1,0 +1,16 @@
+{
+  "name": "granite-wallet-e2e",
+  "private": true,
+  "type": "module",
+  "description": "Drives the built extension in Chrome for Testing: create, lock, unlock, export, receive, dApp connect, sign, reject, switch chain, import",
+  "scripts": {
+    "install-browser": "playwright install chromium",
+    "test": "node extension.e2e.mjs"
+  },
+  "devDependencies": {
+    "@ethersproject/bytes": "^5.7.0",
+    "@ethersproject/strings": "^5.7.0",
+    "@ethersproject/wallet": "^5.7.0",
+    "playwright": "^1.65.0"
+  }
+}

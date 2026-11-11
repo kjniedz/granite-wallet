@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+granite-wallet-*.zip
+release/
+e2e/node_modules/
+e2e/fail.png
