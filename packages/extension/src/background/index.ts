@@ -342,6 +342,7 @@ async function handleDAppRequest(payload: any, sender: chrome.runtime.MessageSen
         chain,
         chainId: config.chainId,
         chainName: config.name,
+        chainSymbol: config.symbol,
       });
       return { result: txResult };
     }

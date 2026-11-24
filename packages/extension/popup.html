@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Granite Wallet</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
+    /* Poppins is bundled with the extension (SIL Open Font License, see
+       fonts/OFL.txt) so the popup makes no request to Google Fonts. */
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/poppins-400.woff2') format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/poppins-500.woff2') format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/poppins-600.woff2') format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/poppins-700.woff2') format('woff2'); }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body, #root {
       width: 360px;
       height: 600px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
       background: #023859;
       color: #fff;
       overflow: hidden;

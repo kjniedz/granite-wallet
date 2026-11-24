@@ -1,6 +1,6 @@
 {
   "name": "@granite/wallet-core",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Core wallet SDK \u2014 key management, multi-chain providers, transaction signing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Granite Wallet · Self-custody wallet for eight chains</title>
+<meta name="description" content="Granite Wallet is an open-source, self-custody browser extension wallet for Ethereum, Polygon, BNB Chain, Avalanche, Arbitrum, Optimism, Base and Solana. No server, no account, no tracking.">
+<meta property="og:title" content="Granite Wallet">
+<meta property="og:description" content="Open-source self-custody wallet for eight chains. Your keys never leave your device.">
+<meta property="og:image" content="https://kjniedz.github.io/granite-wallet/screenshots/store/1-home.png">
+<link rel="icon" href="icon-128.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="./">Granite Wallet</a><nav><a href="#install">Install</a><a href="privacy.html">Privacy</a><a href="https://github.com/kjniedz/granite-wallet">GitHub</a></nav></header>
+
+<section class="hero">
+  <div>
+    <h1>One seed phrase.<br>Eight chains.<br>Nothing leaves your device.</h1>
+    <p class="lead">Granite Wallet is an open-source browser extension for Ethereum, Polygon, BNB Chain, Avalanche, Arbitrum, Optimism, Base and Solana. There is no server and no account. Every signature and transaction is shown to you before it happens.</p>
+    <div class="btns">
+      <a class="btn" href="https://github.com/kjniedz/granite-wallet#install-from-source">Build and install</a>
+      <a class="btn ghost" href="https://github.com/kjniedz/granite-wallet">Read the source</a>
+    </div>
+  </div>
+  <img src="screenshots/home.png" alt="Granite Wallet home screen showing the portfolio balance and token list" width="360" height="600">
+</section>
+<p class="note">Version 1.0. The code has not yet had an independent security audit; read it, build it yourself, and use amounts you are comfortable with until it has.</p>
+
+<section class="grid">
+  <div class="card"><h3>Self-custody</h3><p>The phrase is generated on your device, encrypted with AES-256-GCM under your password, and never sent anywhere. Private keys are derived at signing time and discarded.</p></div>
+  <div class="card"><h3>Standard derivation</h3><p>BIP-39 and BIP-44 for EVM chains, SLIP-0010 for Solana. The same words restore the same accounts in MetaMask, Phantom and hardware wallets.</p></div>
+  <div class="card"><h3>dApp ready</h3><p>Injects an EIP-1193 provider, announces itself through EIP-6963, and handles connect, personal_sign, EIP-712 typed data, transactions and chain switching with your approval each time.</p></div>
+  <div class="card"><h3>No tracking</h3><p>No analytics, no telemetry, no remote fonts. The only network traffic is to the RPC endpoints and CoinGecko for prices, and you can point the RPCs at your own node.</p></div>
+</section>
+
+<section class="shots">
+  <figure><img src="screenshots/home.png" alt="Home screen"><figcaption>Balances and tokens</figcaption></figure>
+  <figure><img src="screenshots/send.png" alt="Send screen"><figcaption>Send with fee tiers</figcaption></figure>
+  <figure><img src="screenshots/receive.png" alt="Receive screen"><figcaption>Receive with a QR code</figcaption></figure>
+  <figure><img src="screenshots/networks.png" alt="Network selector"><figcaption>Eight networks</figcaption></figure>
+  <figure><img src="screenshots/connect.png" alt="Connection request"><figcaption>Connections need approval</figcaption></figure>
+  <figure><img src="screenshots/sign.png" alt="Signature request"><figcaption>Read what you sign</figcaption></figure>
+</section>
+
+<section class="install" id="install">
+  <h2>Install</h2>
+  <p class="muted">Until the Chrome Web Store listing is live, build from source. You need Node 20 or newer.</p>
+<pre><code>git clone https://github.com/kjniedz/granite-wallet
+cd granite-wallet
+npm install
+npm run build</code></pre>
+  <ol>
+    <li>Open <code>chrome://extensions</code> in Chrome, Brave, Edge or Arc.</li>
+    <li>Turn on Developer mode.</li>
+    <li>Click "Load unpacked" and choose <code>packages/extension/dist</code>.</li>
+  </ol>
+</section>
+
+<footer>© 2026 Black Mountain Investment Group LLC · MIT licensed · <a href="privacy.html">Privacy policy</a> · <a href="https://github.com/kjniedz/granite-wallet">Source</a> · <a href="mailto:hello@blackmountainig.com">hello@blackmountainig.com</a></footer>
+</body>
+</html>

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Granite Wallet",
-  "version": "0.2.0",
-  "description": "Self-custody multi-chain wallet for Ethereum, Polygon, BNB Chain, Avalanche, Arbitrum, Optimism, Base and Solana. By Black Mountain Investment Group.",
+  "version": "1.0.0",
+  "description": "Self-custody wallet for Ethereum, Polygon, BNB Chain, Avalanche, Arbitrum, Optimism, Base and Solana. Your keys never leave your device.",
   "minimum_chrome_version": "111",
   "homepage_url": "https://github.com/kjniedz/granite-wallet",
   "author": "Black Mountain Investment Group LLC",
@@ -43,6 +43,6 @@
   "permissions": ["storage", "alarms"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src https:;"
   }
 }

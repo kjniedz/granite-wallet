@@ -1,7 +1,7 @@
 {
   "name": "@granite/extension",
-  "version": "0.2.0",
-  "description": "Granite Wallet Chrome Extension \u2014 Self-custody multi-chain wallet",
+  "version": "1.0.0",
+  "description": "Granite Wallet Chrome extension: self-custody multi-chain wallet",
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",

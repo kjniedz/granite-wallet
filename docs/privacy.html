@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Granite Wallet · Privacy Policy</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="./">Granite Wallet</a><nav><a href="./#install">Install</a><a href="privacy.html">Privacy</a><a href="https://github.com/kjniedz/granite-wallet">GitHub</a></nav></header>
+<main class="prose">
+<h1>Privacy Policy</h1>
+<p class="muted">Effective 24 November 2026. Published by Black Mountain Investment Group LLC ("we"). This policy covers the Granite Wallet browser extension. The source of this document is <code>PRIVACY.md</code> in the repository.</p>
+
+<h2>The short version</h2>
+<p>Granite Wallet has no server, no account and no analytics. We do not collect, receive, store or sell any information about you. Everything the wallet knows lives in your browser's extension storage on your device.</p>
+
+<h2>What the extension stores on your device</h2>
+<ul>
+<li>Your seed phrase, encrypted with AES-256-GCM under a key derived from your password. We cannot decrypt it. If you lose the password and the phrase, nobody can recover the wallet.</li>
+<li>Wallet names and public addresses, unencrypted, so the popup can show them while locked.</li>
+<li>The list of websites you have connected, the network you last used, and a history of transactions you sent from the wallet.</li>
+<li>While unlocked, the decrypted seed phrase is held in <code>chrome.storage.session</code>, which is memory only, readable by the extension alone, and cleared when the browser exits or the wallet locks.</li>
+</ul>
+<p>Removing the extension deletes all of this.</p>
+
+<h2>What leaves your device, and to whom</h2>
+<p>The wallet must talk to blockchains to work. These requests are made directly from your browser; they do not pass through us.</p>
+<ul>
+<li><strong>RPC endpoints.</strong> Balance reads, fee estimates and signed transactions go to public JSON-RPC endpoints operated by PublicNode (<code>*.publicnode.com</code>). They see your IP address and the addresses you query. The URLs are in <code>packages/wallet-core/src/chains/config.ts</code>; you can rebuild the extension pointing at your own provider.</li>
+<li><strong>Price lookups.</strong> USD values come from the CoinGecko public API (<code>api.coingecko.com</code>). CoinGecko sees your IP address and the token symbols requested, never your addresses.</li>
+<li><strong>Websites you connect.</strong> A site you approve receives your public address for the connected account and can ask you to sign messages or transactions. Every such request is shown to you first. Sites you have not connected receive nothing; the injected provider answers only with the chain ID and public chain reads until you connect.</li>
+</ul>
+<p>The fonts and all other assets are bundled with the extension. The popup makes no request to Google or any other third party.</p>
+
+<h2>Permissions</h2>
+<ul>
+<li><code>storage</code>: to keep the encrypted vault and settings.</li>
+<li><code>alarms</code>: to lock the wallet after five minutes without use.</li>
+<li>Host access to <code>http://*/*</code> and <code>https://*/*</code>: to inject the <code>window.ethereum</code> provider into pages so decentralised applications can find the wallet. The content script relays requests and does nothing else. It does not read page content.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Granite Wallet is not directed at children under 13 and we do not knowingly collect information from them. We collect no information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published at this address with a new effective date, and the change will be visible in the repository history.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:hello@blackmountainig.com">hello@blackmountainig.com</a></p>
+</main>
+<footer>© 2026 Black Mountain Investment Group LLC · MIT licensed · <a href="https://github.com/kjniedz/granite-wallet">Source</a></footer>
+</body>
+</html>
